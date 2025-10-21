@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import main from "./pages/main";
+import active_sprint from './pages/active_sprint';
+import tasks from './pages/tasks';
 
-function App() {
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div style={{ textAlign: "center" }}>
+        <nav style={{ marginBottom: "20px" }}>
+          <Link to="/" style={{ margin: "0 10px" }}>
+            Рабочий стол
+          </Link>
+          <Link to="/sprint" style={{ margin: "0 10px" }}>
+            Активный спринт
+          </Link>
+          <Link to="/tasks" style={{ margin: "0 10px" }}>
+            Панель администратора
+          </Link>
+        </nav>
+        <Routes>
+          <Route path="/" element={<main />} />
+          <Route path="/sprint" element={<active_sprint />} />
+          <Route path="/tasks" element={<tasks />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
-
+};
 export default App;
