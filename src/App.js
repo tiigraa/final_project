@@ -1,7 +1,8 @@
 import React from "react";
-import main from "./pages/main";
-import active_sprint from './pages/active_sprint';
-import tasks from './pages/tasks';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Main from "./pages/Main";
+import Active_sprint from './pages/Active_sprint';
+import Tasks from './pages/Tasks';
 
 const App = () => {
 

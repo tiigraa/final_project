@@ -1,10 +1,22 @@
 import React from 'react';
-const main = () => {
-  
+import Select from 'react-select';  
+
+const Main = () => {
+ 
   return (
-    <div style={{ textAlign: "center" }}>
+    <div className="App" style={{ textAlign: "center" }}>
       <h1>Рабочий стол</h1>
-       </div>
+       <p>Выполненные задачи</p>  
+       <select name="selectedFruit" defaultValue={['Иванов', 'Петров', 'Сидоров']}>  
+        <option value="ivanov">Иванов</option>  
+        <option value="petrov">Петров</option>  
+        <option value="sidirov">Сидоров</option>  
+       </select>    
+       
+               
+     </div>  
+            
   );
 };
-export default main;
+
+export default Main;

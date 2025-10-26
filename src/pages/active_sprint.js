@@ -1,6 +1,6 @@
 import React from 'react';
 
-const active_sprint = () => {
+const Active_sprint = () => {
  
   return (
     <div style={{ textAlign: "center" }}>
@@ -9,4 +9,4 @@ const active_sprint = () => {
   );
 };
 
-export default active_sprint;
+export default Active_sprint;
